@@ -32,5 +32,13 @@ jobs:
       run: |
         pip install pytest
         pytest
+         import vlc
+        import time
         
+        playlist = ["home/pi/music/song1", "home/pi/music/song2","home/pi/music/song3","home/pi/music/song4"]
+        
+        for song in playlist:
+          vlcplayer = vlc.MediaPlayer(song)
+          vlcplayer.play()
+          time.sleep(360)
        
