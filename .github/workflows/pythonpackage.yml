@@ -1,16 +1,17 @@
-
-
 import pigpio
 import time
 
 red_pin = 17
 green_pin = 22
 blue_pin = 24
+r = 0
+g = 0
+b = 0
 
 pi = pigpio.pi()
 
-pi.set_PWM_dutycycle(red_pin, 0 )
-pi.set_PWM_dutycycle(green_pin, 0 )
-pi.set_PWM_dutycycle(blue_pin, 255 )
+pi.set_PWM_dutycycle(red_pin, r )
+pi.set_PWM_dutycycle(green_pin, g )
+pi.set_PWM_dutycycle(blue_pin, b )
 
 pi.stop()
